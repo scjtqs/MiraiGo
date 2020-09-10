@@ -181,7 +181,7 @@ message Elem {
   CustomFace customFace = 8;
   //ElemFlags2 elemFlags2 = 9;
   //FunFace funFace = 10;
-  //SecretFileMsg secretFile = 11;
+  SecretFileMsg secretFile = 11;
   RichMsg richMsg = 12;
   GroupFile groupFile = 13;
   //PubGroup pubGroup = 14;
@@ -202,13 +202,13 @@ message Elem {
   //bytes bankcodeCtrlInfo = 29;
   //NearByMessageType? nearByMsg = 30;
   CustomElem customElem = 31;
-  //LocationInfo? locationInfo = 32;
+  LocationInfo locationInfo = 32;
   //PubAccInfo? pubAccInfo = 33;
   //SmallEmoji? smallEmoji = 34;
   //FSJMessageElem? fsjMsgElem = 35;
   //ArkAppElem? arkApp = 36;
   GeneralFlags generalFlags = 37;
-  //CustomFace? hcFlashPic = 38;
+  CustomFace hcFlashPic = 38;
   //DeliverGiftMsg? deliverGiftMsg = 39;
   //BitAppMsg? bitappMsg = 40;
   //OpenQQData? openQqData = 41;
@@ -650,4 +650,39 @@ enum SyncFlag {
   START = 0;
   CONTINUME = 1;
   STOP = 2;
+}
+
+message SecretFileMsg
+{
+    enum OperType{
+        TYPE_C2C = 0; //好友
+		TYPE_CONTACTS = 1;//通讯录临时会话
+        TYPE_GROUP = 2;//群临时会话
+        TYPE_NEARBA = 3; //附近人临时会话
+        TYPE_DISCU = 4;//讨论组临时会话
+        TYPE_WPA = 5; //wpa临时会话
+    }
+
+    bytes  bytes_file_key       = 1;      //scretfile标识。上报scretfile状态时用这个标识。
+    uint64 uint64_from_uin      = 2;      // 发送方号码
+    uint64 uint64_to_uin        = 3;      // 接收方号码
+    uint32 uint32_status        = 4;      // 发送方发送图片时，填0；
+    uint32 uint32_ttl           = 5;      // 图片生存时间, 单位为秒
+    uint32 uint32_type          = 6;      // snapchat类型，1：图片,2：ptt, 3：video
+    uint32 uint32_encrypt_prehead_length  = 7;  // 加密的头部长度
+    uint32 uint32_encrypt_type  = 8;      // 加密类型
+    bytes  bytes_encrypt_key    = 9;      // 加密的key
+    uint32 uint32_read_times    = 10;     // 可以查看的次数
+    uint32 uint32_left_time     = 11;     // 剩余时长，单位秒
+    NotOnlineImage not_online_image = 12; // 离线图片
+    //ElemFlags2 elem_flags2 = 13;          //业务数据(存放气泡id)
+    uint32 uint32_opertype      = 14;     //闪照类型，参考[OperType]
+    string str_fromphonenum     = 15;     //发送方手机号码
+}
+
+message LocationInfo
+{
+    double double_longitude = 1; //经度
+    double double_latitude  = 2; //纬度
+    bytes  bytes_desc       = 3;
 }
