@@ -30,8 +30,9 @@ import (
 )
 
 type QQClient struct {
-	Uin         int64
-	PasswordMd5 [16]byte
+	Uin          int64
+	PasswordMd5  [16]byte
+	CustomServer *net.TCPAddr
 
 	Nickname   string
 	Age        uint16
@@ -44,6 +45,7 @@ type QQClient struct {
 	OutGoingPacketSessionId []byte
 	RandomKey               []byte
 	Conn                    net.Conn
+	ConnectTime             time.Time
 
 	decoders map[string]func(*QQClient, uint16, []byte) (interface{}, error)
 	handlers sync.Map
@@ -296,6 +298,11 @@ func (c *QQClient) SendGroupMessage(groupCode int64, m *message.SendingMessage, 
 		useFram = f[0]
 	}
 	imgCount := m.Count(func(e message.IMessageElement) bool { return e.Type() == message.Image })
+	if useFram {
+		if m.Any(func(e message.IMessageElement) bool { return e.Type() == message.Reply }) {
+			useFram = false
+		}
+	}
 	msgLen := message.EstimateLength(m.Elements, 703)
 	if msgLen > 5000 || imgCount > 50 {
 		return nil
@@ -653,7 +660,7 @@ func (c *QQClient) ReloadGroupList() error {
 }
 
 func (c *QQClient) GetGroupList() ([]*GroupInfo, error) {
-	rsp, err := c.sendAndWait(c.buildGroupListRequestPacket())
+	rsp, err := c.sendAndWait(c.buildGroupListRequestPacket(EmptyBytes))
 	if err != nil {
 		return nil, err
 	}
@@ -857,21 +864,27 @@ var servers = []*net.TCPAddr{
 
 func (c *QQClient) connect() error {
 	if c.server == nil {
-		addrs, err := net.LookupIP("msfwifi.3g.qq.com")
-		if err == nil && len(addrs) > 0 {
-			c.server = &net.TCPAddr{
-				IP:   addrs[rand.Intn(len(addrs))],
-				Port: 8080,
-			}
+		if c.CustomServer != nil {
+			c.server = c.CustomServer
 		} else {
-			c.server = servers[rand.Intn(len(servers))]
+			addrs, err := net.LookupIP("msfwifi.3g.qq.com")
+			if err == nil && len(addrs) > 0 {
+				c.server = &net.TCPAddr{
+					IP:   addrs[rand.Intn(len(addrs))],
+					Port: 8080,
+				}
+			} else {
+				c.server = servers[rand.Intn(len(servers))]
+			}
 		}
 	}
 	c.Info("connect to server: %v", c.server.String())
 	conn, err := net.DialTCP("tcp", nil, c.server)
 	if err != nil {
+		c.CustomServer = nil
 		return err
 	}
+	c.ConnectTime = time.Now()
 	c.Conn = conn
 	c.onlinePushCache = []int16{}
 	return nil
@@ -936,6 +949,7 @@ func (c *QQClient) sendAndWait(seq uint16, pkt []byte) (interface{}, error) {
 		case <-time.After(time.Second * 30):
 			retry++
 			if retry < 2 {
+				c.Error("packet %v timed out. retry.", seq)
 				_ = c.send(pkt)
 				continue
 			}
@@ -954,6 +968,12 @@ func (c *QQClient) netLoop() {
 	for c.Online {
 		l, err := reader.ReadInt32()
 		if err == io.EOF || err == io.ErrClosedPipe {
+			c.Error("connection dropped by server: %v", err)
+			if c.ConnectTime.Sub(time.Now()) < time.Minute && c.CustomServer != nil {
+				c.Error("custom server error.")
+				c.CustomServer = nil
+				c.server = nil
+			}
 			err = c.connect()
 			if err != nil {
 				break
