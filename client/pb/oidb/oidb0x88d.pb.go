@@ -25,7 +25,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type D8DGroupHeadPortraitInfo struct {
+type D88GroupHeadPortraitInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -33,8 +33,8 @@ type D8DGroupHeadPortraitInfo struct {
 	RptUint32PicId uint32 `protobuf:"varint,1,opt,name=rpt_uint32_pic_id,json=rptUint32PicId,proto3" json:"rpt_uint32_pic_id,omitempty"`
 }
 
-func (x *D8DGroupHeadPortraitInfo) Reset() {
-	*x = D8DGroupHeadPortraitInfo{}
+func (x *D88GroupHeadPortraitInfo) Reset() {
+	*x = D88GroupHeadPortraitInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -42,13 +42,13 @@ func (x *D8DGroupHeadPortraitInfo) Reset() {
 	}
 }
 
-func (x *D8DGroupHeadPortraitInfo) String() string {
+func (x *D88GroupHeadPortraitInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DGroupHeadPortraitInfo) ProtoMessage() {}
+func (*D88GroupHeadPortraitInfo) ProtoMessage() {}
 
-func (x *D8DGroupHeadPortraitInfo) ProtoReflect() protoreflect.Message {
+func (x *D88GroupHeadPortraitInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -60,32 +60,32 @@ func (x *D8DGroupHeadPortraitInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DGroupHeadPortraitInfo.ProtoReflect.Descriptor instead.
-func (*D8DGroupHeadPortraitInfo) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88GroupHeadPortraitInfo.ProtoReflect.Descriptor instead.
+func (*D88GroupHeadPortraitInfo) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *D8DGroupHeadPortraitInfo) GetRptUint32PicId() uint32 {
+func (x *D88GroupHeadPortraitInfo) GetRptUint32PicId() uint32 {
 	if x != nil {
 		return x.RptUint32PicId
 	}
 	return 0
 }
 
-type D8DGroupHeadPortrait struct {
+type D88GroupHeadPortrait struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	Uint32PicCnt           uint32                      `protobuf:"varint,1,opt,name=uint32_pic_cnt,json=uint32PicCnt,proto3" json:"uint32_pic_cnt,omitempty"`
-	RptMsgInfo             []*D8DGroupHeadPortraitInfo `protobuf:"bytes,2,rep,name=rpt_msg_info,json=rptMsgInfo,proto3" json:"rpt_msg_info,omitempty"`
+	RptMsgInfo             []*D88GroupHeadPortraitInfo `protobuf:"bytes,2,rep,name=rpt_msg_info,json=rptMsgInfo,proto3" json:"rpt_msg_info,omitempty"`
 	Uint32DefaultId        uint32                      `protobuf:"varint,3,opt,name=uint32_default_id,json=uint32DefaultId,proto3" json:"uint32_default_id,omitempty"`
 	Uint32VerifyingPicCnt  uint32                      `protobuf:"varint,4,opt,name=uint32_verifying_pic_cnt,json=uint32VerifyingPicCnt,proto3" json:"uint32_verifying_pic_cnt,omitempty"`
-	RptMsgVerifyingpicInfo []*D8DGroupHeadPortraitInfo `protobuf:"bytes,5,rep,name=rpt_msg_verifyingpic_info,json=rptMsgVerifyingpicInfo,proto3" json:"rpt_msg_verifyingpic_info,omitempty"`
+	RptMsgVerifyingpicInfo []*D88GroupHeadPortraitInfo `protobuf:"bytes,5,rep,name=rpt_msg_verifyingpic_info,json=rptMsgVerifyingpicInfo,proto3" json:"rpt_msg_verifyingpic_info,omitempty"`
 }
 
-func (x *D8DGroupHeadPortrait) Reset() {
-	*x = D8DGroupHeadPortrait{}
+func (x *D88GroupHeadPortrait) Reset() {
+	*x = D88GroupHeadPortrait{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -93,13 +93,13 @@ func (x *D8DGroupHeadPortrait) Reset() {
 	}
 }
 
-func (x *D8DGroupHeadPortrait) String() string {
+func (x *D88GroupHeadPortrait) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DGroupHeadPortrait) ProtoMessage() {}
+func (*D88GroupHeadPortrait) ProtoMessage() {}
 
-func (x *D8DGroupHeadPortrait) ProtoReflect() protoreflect.Message {
+func (x *D88GroupHeadPortrait) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -111,47 +111,47 @@ func (x *D8DGroupHeadPortrait) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DGroupHeadPortrait.ProtoReflect.Descriptor instead.
-func (*D8DGroupHeadPortrait) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88GroupHeadPortrait.ProtoReflect.Descriptor instead.
+func (*D88GroupHeadPortrait) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *D8DGroupHeadPortrait) GetUint32PicCnt() uint32 {
+func (x *D88GroupHeadPortrait) GetUint32PicCnt() uint32 {
 	if x != nil {
 		return x.Uint32PicCnt
 	}
 	return 0
 }
 
-func (x *D8DGroupHeadPortrait) GetRptMsgInfo() []*D8DGroupHeadPortraitInfo {
+func (x *D88GroupHeadPortrait) GetRptMsgInfo() []*D88GroupHeadPortraitInfo {
 	if x != nil {
 		return x.RptMsgInfo
 	}
 	return nil
 }
 
-func (x *D8DGroupHeadPortrait) GetUint32DefaultId() uint32 {
+func (x *D88GroupHeadPortrait) GetUint32DefaultId() uint32 {
 	if x != nil {
 		return x.Uint32DefaultId
 	}
 	return 0
 }
 
-func (x *D8DGroupHeadPortrait) GetUint32VerifyingPicCnt() uint32 {
+func (x *D88GroupHeadPortrait) GetUint32VerifyingPicCnt() uint32 {
 	if x != nil {
 		return x.Uint32VerifyingPicCnt
 	}
 	return 0
 }
 
-func (x *D8DGroupHeadPortrait) GetRptMsgVerifyingpicInfo() []*D8DGroupHeadPortraitInfo {
+func (x *D88GroupHeadPortrait) GetRptMsgVerifyingpicInfo() []*D88GroupHeadPortraitInfo {
 	if x != nil {
 		return x.RptMsgVerifyingpicInfo
 	}
 	return nil
 }
 
-type D8DGroupExInfoOnly struct {
+type D88GroupExInfoOnly struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -160,8 +160,8 @@ type D8DGroupExInfoOnly struct {
 	Uint32MoneyForAddGroup uint32 `protobuf:"varint,2,opt,name=uint32_money_for_add_group,json=uint32MoneyForAddGroup,proto3" json:"uint32_money_for_add_group,omitempty"`
 }
 
-func (x *D8DGroupExInfoOnly) Reset() {
-	*x = D8DGroupExInfoOnly{}
+func (x *D88GroupExInfoOnly) Reset() {
+	*x = D88GroupExInfoOnly{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -169,13 +169,13 @@ func (x *D8DGroupExInfoOnly) Reset() {
 	}
 }
 
-func (x *D8DGroupExInfoOnly) String() string {
+func (x *D88GroupExInfoOnly) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DGroupExInfoOnly) ProtoMessage() {}
+func (*D88GroupExInfoOnly) ProtoMessage() {}
 
-func (x *D8DGroupExInfoOnly) ProtoReflect() protoreflect.Message {
+func (x *D88GroupExInfoOnly) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -187,26 +187,26 @@ func (x *D8DGroupExInfoOnly) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DGroupExInfoOnly.ProtoReflect.Descriptor instead.
-func (*D8DGroupExInfoOnly) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88GroupExInfoOnly.ProtoReflect.Descriptor instead.
+func (*D88GroupExInfoOnly) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *D8DGroupExInfoOnly) GetUint32TribeId() uint32 {
+func (x *D88GroupExInfoOnly) GetUint32TribeId() uint32 {
 	if x != nil {
 		return x.Uint32TribeId
 	}
 	return 0
 }
 
-func (x *D8DGroupExInfoOnly) GetUint32MoneyForAddGroup() uint32 {
+func (x *D88GroupExInfoOnly) GetUint32MoneyForAddGroup() uint32 {
 	if x != nil {
 		return x.Uint32MoneyForAddGroup
 	}
 	return 0
 }
 
-type D8DGroupInfo struct {
+type D88GroupInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -251,10 +251,10 @@ type D8DGroupInfo struct {
 	Uint32CertificationType       uint32                `protobuf:"varint,38,opt,name=uint32_certification_type,json=uint32CertificationType,proto3" json:"uint32_certification_type,omitempty"`
 	StringCertificationText       []byte                `protobuf:"bytes,39,opt,name=string_certification_text,json=stringCertificationText,proto3" json:"string_certification_text,omitempty"`
 	StringGroupRichFingerMemo     []byte                `protobuf:"bytes,40,opt,name=string_group_rich_finger_memo,json=stringGroupRichFingerMemo,proto3" json:"string_group_rich_finger_memo,omitempty"`
-	RptTagRecord                  []*D8DTagRecord       `protobuf:"bytes,41,rep,name=rpt_tag_record,json=rptTagRecord,proto3" json:"rpt_tag_record,omitempty"`
-	GroupGeoInfo                  *D8DGroupGeoInfo      `protobuf:"bytes,42,opt,name=group_geo_info,json=groupGeoInfo,proto3" json:"group_geo_info,omitempty"`
+	RptTagRecord                  []*D88TagRecord       `protobuf:"bytes,41,rep,name=rpt_tag_record,json=rptTagRecord,proto3" json:"rpt_tag_record,omitempty"`
+	GroupGeoInfo                  *D88GroupGeoInfo      `protobuf:"bytes,42,opt,name=group_geo_info,json=groupGeoInfo,proto3" json:"group_geo_info,omitempty"`
 	Uint32HeadPortraitSeq         uint32                `protobuf:"varint,43,opt,name=uint32_head_portrait_seq,json=uint32HeadPortraitSeq,proto3" json:"uint32_head_portrait_seq,omitempty"`
-	MsgHeadPortrait               *D8DGroupHeadPortrait `protobuf:"bytes,44,opt,name=msg_head_portrait,json=msgHeadPortrait,proto3" json:"msg_head_portrait,omitempty"`
+	MsgHeadPortrait               *D88GroupHeadPortrait `protobuf:"bytes,44,opt,name=msg_head_portrait,json=msgHeadPortrait,proto3" json:"msg_head_portrait,omitempty"`
 	Uint32ShutupTimestamp         uint32                `protobuf:"varint,45,opt,name=uint32_shutup_timestamp,json=uint32ShutupTimestamp,proto3" json:"uint32_shutup_timestamp,omitempty"`
 	Uint32ShutupTimestampMe       uint32                `protobuf:"varint,46,opt,name=uint32_shutup_timestamp_me,json=uint32ShutupTimestampMe,proto3" json:"uint32_shutup_timestamp_me,omitempty"`
 	Uint32CreateSourceFlag        uint32                `protobuf:"varint,47,opt,name=uint32_create_source_flag,json=uint32CreateSourceFlag,proto3" json:"uint32_create_source_flag,omitempty"`
@@ -267,7 +267,7 @@ type D8DGroupInfo struct {
 	Uint32CmduinLastMsgTime       uint32                `protobuf:"varint,54,opt,name=uint32_cmduin_last_msg_time,json=uint32CmduinLastMsgTime,proto3" json:"uint32_cmduin_last_msg_time,omitempty"`
 	Uint32GroupTypeFlag           uint32                `protobuf:"varint,55,opt,name=uint32_group_type_flag,json=uint32GroupTypeFlag,proto3" json:"uint32_group_type_flag,omitempty"`
 	Uint32AppPrivilegeFlag        uint32                `protobuf:"varint,56,opt,name=uint32_app_privilege_flag,json=uint32AppPrivilegeFlag,proto3" json:"uint32_app_privilege_flag,omitempty"`
-	StGroupExInfo                 *D8DGroupExInfoOnly   `protobuf:"bytes,57,opt,name=st_group_ex_info,json=stGroupExInfo,proto3" json:"st_group_ex_info,omitempty"`
+	StGroupExInfo                 *D88GroupExInfoOnly   `protobuf:"bytes,57,opt,name=st_group_ex_info,json=stGroupExInfo,proto3" json:"st_group_ex_info,omitempty"`
 	Uint32GroupSecLevel           uint32                `protobuf:"varint,58,opt,name=uint32_group_sec_level,json=uint32GroupSecLevel,proto3" json:"uint32_group_sec_level,omitempty"`
 	Uint32GroupSecLevelInfo       uint32                `protobuf:"varint,59,opt,name=uint32_group_sec_level_info,json=uint32GroupSecLevelInfo,proto3" json:"uint32_group_sec_level_info,omitempty"`
 	Uint32CmduinPrivilege         uint32                `protobuf:"varint,60,opt,name=uint32_cmduin_privilege,json=uint32CmduinPrivilege,proto3" json:"uint32_cmduin_privilege,omitempty"`
@@ -296,8 +296,8 @@ type D8DGroupInfo struct {
 	Uint32NoCodeFingerOpenFlag    uint32                `protobuf:"varint,83,opt,name=uint32_no_code_finger_open_flag,json=uint32NoCodeFingerOpenFlag,proto3" json:"uint32_no_code_finger_open_flag,omitempty"`
 }
 
-func (x *D8DGroupInfo) Reset() {
-	*x = D8DGroupInfo{}
+func (x *D88GroupInfo) Reset() {
+	*x = D88GroupInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -305,13 +305,13 @@ func (x *D8DGroupInfo) Reset() {
 	}
 }
 
-func (x *D8DGroupInfo) String() string {
+func (x *D88GroupInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DGroupInfo) ProtoMessage() {}
+func (*D88GroupInfo) ProtoMessage() {}
 
-func (x *D8DGroupInfo) ProtoReflect() protoreflect.Message {
+func (x *D88GroupInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -323,604 +323,604 @@ func (x *D8DGroupInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DGroupInfo.ProtoReflect.Descriptor instead.
-func (*D8DGroupInfo) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88GroupInfo.ProtoReflect.Descriptor instead.
+func (*D88GroupInfo) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *D8DGroupInfo) GetUint64GroupOwner() uint64 {
+func (x *D88GroupInfo) GetUint64GroupOwner() uint64 {
 	if x != nil {
 		return x.Uint64GroupOwner
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupCreateTime() uint32 {
+func (x *D88GroupInfo) GetUint32GroupCreateTime() uint32 {
 	if x != nil {
 		return x.Uint32GroupCreateTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupFlag() uint32 {
+func (x *D88GroupInfo) GetUint32GroupFlag() uint32 {
 	if x != nil {
 		return x.Uint32GroupFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupFlagExt() uint32 {
+func (x *D88GroupInfo) GetUint32GroupFlagExt() uint32 {
 	if x != nil {
 		return x.Uint32GroupFlagExt
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupMemberMaxNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupMemberMaxNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupMemberMaxNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupMemberNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupMemberNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupMemberNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupOption() uint32 {
+func (x *D88GroupInfo) GetUint32GroupOption() uint32 {
 	if x != nil {
 		return x.Uint32GroupOption
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupClassExt() uint32 {
+func (x *D88GroupInfo) GetUint32GroupClassExt() uint32 {
 	if x != nil {
 		return x.Uint32GroupClassExt
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupSpecialClass() uint32 {
+func (x *D88GroupInfo) GetUint32GroupSpecialClass() uint32 {
 	if x != nil {
 		return x.Uint32GroupSpecialClass
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupLevel() uint32 {
+func (x *D88GroupInfo) GetUint32GroupLevel() uint32 {
 	if x != nil {
 		return x.Uint32GroupLevel
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupFace() uint32 {
+func (x *D88GroupInfo) GetUint32GroupFace() uint32 {
 	if x != nil {
 		return x.Uint32GroupFace
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupDefaultPage() uint32 {
+func (x *D88GroupInfo) GetUint32GroupDefaultPage() uint32 {
 	if x != nil {
 		return x.Uint32GroupDefaultPage
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupInfoSeq() uint32 {
+func (x *D88GroupInfo) GetUint32GroupInfoSeq() uint32 {
 	if x != nil {
 		return x.Uint32GroupInfoSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupRoamingTime() uint32 {
+func (x *D88GroupInfo) GetUint32GroupRoamingTime() uint32 {
 	if x != nil {
 		return x.Uint32GroupRoamingTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringGroupName() []byte {
+func (x *D88GroupInfo) GetStringGroupName() []byte {
 	if x != nil {
 		return x.StringGroupName
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupMemo() []byte {
+func (x *D88GroupInfo) GetStringGroupMemo() []byte {
 	if x != nil {
 		return x.StringGroupMemo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupFingerMemo() []byte {
+func (x *D88GroupInfo) GetStringGroupFingerMemo() []byte {
 	if x != nil {
 		return x.StringGroupFingerMemo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupClassText() []byte {
+func (x *D88GroupInfo) GetStringGroupClassText() []byte {
 	if x != nil {
 		return x.StringGroupClassText
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupAllianceCode() []uint32 {
+func (x *D88GroupInfo) GetUint32GroupAllianceCode() []uint32 {
 	if x != nil {
 		return x.Uint32GroupAllianceCode
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupExtraAdmNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupExtraAdmNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupExtraAdmNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64GroupUin() uint64 {
+func (x *D88GroupInfo) GetUint64GroupUin() uint64 {
 	if x != nil {
 		return x.Uint64GroupUin
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupCurMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32GroupCurMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32GroupCurMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupLastMsgTime() uint32 {
+func (x *D88GroupInfo) GetUint32GroupLastMsgTime() uint32 {
 	if x != nil {
 		return x.Uint32GroupLastMsgTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringGroupQuestion() []byte {
+func (x *D88GroupInfo) GetStringGroupQuestion() []byte {
 	if x != nil {
 		return x.StringGroupQuestion
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupAnswer() []byte {
+func (x *D88GroupInfo) GetStringGroupAnswer() []byte {
 	if x != nil {
 		return x.StringGroupAnswer
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupVisitorMaxNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupVisitorMaxNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupVisitorMaxNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupVisitorCurNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupVisitorCurNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupVisitorCurNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32LevelNameSeq() uint32 {
+func (x *D88GroupInfo) GetUint32LevelNameSeq() uint32 {
 	if x != nil {
 		return x.Uint32LevelNameSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupAdminMaxNum() uint32 {
+func (x *D88GroupInfo) GetUint32GroupAdminMaxNum() uint32 {
 	if x != nil {
 		return x.Uint32GroupAdminMaxNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupAioSkinTimestamp() uint32 {
+func (x *D88GroupInfo) GetUint32GroupAioSkinTimestamp() uint32 {
 	if x != nil {
 		return x.Uint32GroupAioSkinTimestamp
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupBoardSkinTimestamp() uint32 {
+func (x *D88GroupInfo) GetUint32GroupBoardSkinTimestamp() uint32 {
 	if x != nil {
 		return x.Uint32GroupBoardSkinTimestamp
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringGroupAioSkinUrl() []byte {
+func (x *D88GroupInfo) GetStringGroupAioSkinUrl() []byte {
 	if x != nil {
 		return x.StringGroupAioSkinUrl
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupBoardSkinUrl() []byte {
+func (x *D88GroupInfo) GetStringGroupBoardSkinUrl() []byte {
 	if x != nil {
 		return x.StringGroupBoardSkinUrl
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupCoverSkinTimestamp() uint32 {
+func (x *D88GroupInfo) GetUint32GroupCoverSkinTimestamp() uint32 {
 	if x != nil {
 		return x.Uint32GroupCoverSkinTimestamp
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringGroupCoverSkinUrl() []byte {
+func (x *D88GroupInfo) GetStringGroupCoverSkinUrl() []byte {
 	if x != nil {
 		return x.StringGroupCoverSkinUrl
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupGrade() uint32 {
+func (x *D88GroupInfo) GetUint32GroupGrade() uint32 {
 	if x != nil {
 		return x.Uint32GroupGrade
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32ActiveMemberNum() uint32 {
+func (x *D88GroupInfo) GetUint32ActiveMemberNum() uint32 {
 	if x != nil {
 		return x.Uint32ActiveMemberNum
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CertificationType() uint32 {
+func (x *D88GroupInfo) GetUint32CertificationType() uint32 {
 	if x != nil {
 		return x.Uint32CertificationType
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringCertificationText() []byte {
+func (x *D88GroupInfo) GetStringCertificationText() []byte {
 	if x != nil {
 		return x.StringCertificationText
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetStringGroupRichFingerMemo() []byte {
+func (x *D88GroupInfo) GetStringGroupRichFingerMemo() []byte {
 	if x != nil {
 		return x.StringGroupRichFingerMemo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetRptTagRecord() []*D8DTagRecord {
+func (x *D88GroupInfo) GetRptTagRecord() []*D88TagRecord {
 	if x != nil {
 		return x.RptTagRecord
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetGroupGeoInfo() *D8DGroupGeoInfo {
+func (x *D88GroupInfo) GetGroupGeoInfo() *D88GroupGeoInfo {
 	if x != nil {
 		return x.GroupGeoInfo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32HeadPortraitSeq() uint32 {
+func (x *D88GroupInfo) GetUint32HeadPortraitSeq() uint32 {
 	if x != nil {
 		return x.Uint32HeadPortraitSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetMsgHeadPortrait() *D8DGroupHeadPortrait {
+func (x *D88GroupInfo) GetMsgHeadPortrait() *D88GroupHeadPortrait {
 	if x != nil {
 		return x.MsgHeadPortrait
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32ShutupTimestamp() uint32 {
+func (x *D88GroupInfo) GetUint32ShutupTimestamp() uint32 {
 	if x != nil {
 		return x.Uint32ShutupTimestamp
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32ShutupTimestampMe() uint32 {
+func (x *D88GroupInfo) GetUint32ShutupTimestampMe() uint32 {
 	if x != nil {
 		return x.Uint32ShutupTimestampMe
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CreateSourceFlag() uint32 {
+func (x *D88GroupInfo) GetUint32CreateSourceFlag() uint32 {
 	if x != nil {
 		return x.Uint32CreateSourceFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32CmduinMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinJoinTime() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinJoinTime() uint32 {
 	if x != nil {
 		return x.Uint32CmduinJoinTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinUinFlag() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinUinFlag() uint32 {
 	if x != nil {
 		return x.Uint32CmduinUinFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinFlagEx() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinFlagEx() uint32 {
 	if x != nil {
 		return x.Uint32CmduinFlagEx
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinNewMobileFlag() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinNewMobileFlag() uint32 {
 	if x != nil {
 		return x.Uint32CmduinNewMobileFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinReadMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinReadMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32CmduinReadMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinLastMsgTime() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinLastMsgTime() uint32 {
 	if x != nil {
 		return x.Uint32CmduinLastMsgTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupTypeFlag() uint32 {
+func (x *D88GroupInfo) GetUint32GroupTypeFlag() uint32 {
 	if x != nil {
 		return x.Uint32GroupTypeFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32AppPrivilegeFlag() uint32 {
+func (x *D88GroupInfo) GetUint32AppPrivilegeFlag() uint32 {
 	if x != nil {
 		return x.Uint32AppPrivilegeFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStGroupExInfo() *D8DGroupExInfoOnly {
+func (x *D88GroupInfo) GetStGroupExInfo() *D88GroupExInfoOnly {
 	if x != nil {
 		return x.StGroupExInfo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32GroupSecLevel() uint32 {
+func (x *D88GroupInfo) GetUint32GroupSecLevel() uint32 {
 	if x != nil {
 		return x.Uint32GroupSecLevel
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupSecLevelInfo() uint32 {
+func (x *D88GroupInfo) GetUint32GroupSecLevelInfo() uint32 {
 	if x != nil {
 		return x.Uint32GroupSecLevelInfo
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinPrivilege() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinPrivilege() uint32 {
 	if x != nil {
 		return x.Uint32CmduinPrivilege
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetStringPoidInfo() []byte {
+func (x *D88GroupInfo) GetStringPoidInfo() []byte {
 	if x != nil {
 		return x.StringPoidInfo
 	}
 	return nil
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinFlagEx2() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinFlagEx2() uint32 {
 	if x != nil {
 		return x.Uint32CmduinFlagEx2
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64ConfUin() uint64 {
+func (x *D88GroupInfo) GetUint64ConfUin() uint64 {
 	if x != nil {
 		return x.Uint64ConfUin
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32ConfMaxMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32ConfMaxMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32ConfMaxMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32ConfToGroupTime() uint32 {
+func (x *D88GroupInfo) GetUint32ConfToGroupTime() uint32 {
 	if x != nil {
 		return x.Uint32ConfToGroupTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32PasswordRedbagTime() uint32 {
+func (x *D88GroupInfo) GetUint32PasswordRedbagTime() uint32 {
 	if x != nil {
 		return x.Uint32PasswordRedbagTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64SubscriptionUin() uint64 {
+func (x *D88GroupInfo) GetUint64SubscriptionUin() uint64 {
 	if x != nil {
 		return x.Uint64SubscriptionUin
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32MemberListChangeSeq() uint32 {
+func (x *D88GroupInfo) GetUint32MemberListChangeSeq() uint32 {
 	if x != nil {
 		return x.Uint32MemberListChangeSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32MembercardSeq() uint32 {
+func (x *D88GroupInfo) GetUint32MembercardSeq() uint32 {
 	if x != nil {
 		return x.Uint32MembercardSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64RootId() uint64 {
+func (x *D88GroupInfo) GetUint64RootId() uint64 {
 	if x != nil {
 		return x.Uint64RootId
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64ParentId() uint64 {
+func (x *D88GroupInfo) GetUint64ParentId() uint64 {
 	if x != nil {
 		return x.Uint64ParentId
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32TeamSeq() uint32 {
+func (x *D88GroupInfo) GetUint32TeamSeq() uint32 {
 	if x != nil {
 		return x.Uint32TeamSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64HistoryMsgBeginTime() uint64 {
+func (x *D88GroupInfo) GetUint64HistoryMsgBeginTime() uint64 {
 	if x != nil {
 		return x.Uint64HistoryMsgBeginTime
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint64InviteNoAuthNumLimit() uint64 {
+func (x *D88GroupInfo) GetUint64InviteNoAuthNumLimit() uint64 {
 	if x != nil {
 		return x.Uint64InviteNoAuthNumLimit
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinHistoryMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinHistoryMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32CmduinHistoryMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32CmduinJoinMsgSeq() uint32 {
+func (x *D88GroupInfo) GetUint32CmduinJoinMsgSeq() uint32 {
 	if x != nil {
 		return x.Uint32CmduinJoinMsgSeq
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupFlagext3() uint32 {
+func (x *D88GroupInfo) GetUint32GroupFlagext3() uint32 {
 	if x != nil {
 		return x.Uint32GroupFlagext3
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32GroupOpenAppid() uint32 {
+func (x *D88GroupInfo) GetUint32GroupOpenAppid() uint32 {
 	if x != nil {
 		return x.Uint32GroupOpenAppid
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32IsConfGroup() uint32 {
+func (x *D88GroupInfo) GetUint32IsConfGroup() uint32 {
 	if x != nil {
 		return x.Uint32IsConfGroup
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32IsModifyConfGroupFace() uint32 {
+func (x *D88GroupInfo) GetUint32IsModifyConfGroupFace() uint32 {
 	if x != nil {
 		return x.Uint32IsModifyConfGroupFace
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32IsModifyConfGroupName() uint32 {
+func (x *D88GroupInfo) GetUint32IsModifyConfGroupName() uint32 {
 	if x != nil {
 		return x.Uint32IsModifyConfGroupName
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32NoFingerOpenFlag() uint32 {
+func (x *D88GroupInfo) GetUint32NoFingerOpenFlag() uint32 {
 	if x != nil {
 		return x.Uint32NoFingerOpenFlag
 	}
 	return 0
 }
 
-func (x *D8DGroupInfo) GetUint32NoCodeFingerOpenFlag() uint32 {
+func (x *D88GroupInfo) GetUint32NoCodeFingerOpenFlag() uint32 {
 	if x != nil {
 		return x.Uint32NoCodeFingerOpenFlag
 	}
 	return 0
 }
 
-type D8DReqGroupInfo struct {
+type D88ReqGroupInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	Uint64GroupCode            uint64        `protobuf:"varint,1,opt,name=uint64_group_code,json=uint64GroupCode,proto3" json:"uint64_group_code,omitempty"`
-	Stgroupinfo                *D8DGroupInfo `protobuf:"bytes,2,opt,name=stgroupinfo,proto3" json:"stgroupinfo,omitempty"`
+	Stgroupinfo                *D88GroupInfo `protobuf:"bytes,2,opt,name=stgroupinfo,proto3" json:"stgroupinfo,omitempty"`
 	Uint32LastGetGroupNameTime uint32        `protobuf:"varint,3,opt,name=uint32_last_get_group_name_time,json=uint32LastGetGroupNameTime,proto3" json:"uint32_last_get_group_name_time,omitempty"`
 }
 
-func (x *D8DReqGroupInfo) Reset() {
-	*x = D8DReqGroupInfo{}
+func (x *D88ReqGroupInfo) Reset() {
+	*x = D88ReqGroupInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -928,13 +928,13 @@ func (x *D8DReqGroupInfo) Reset() {
 	}
 }
 
-func (x *D8DReqGroupInfo) String() string {
+func (x *D88ReqGroupInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DReqGroupInfo) ProtoMessage() {}
+func (*D88ReqGroupInfo) ProtoMessage() {}
 
-func (x *D8DReqGroupInfo) ProtoReflect() protoreflect.Message {
+func (x *D88ReqGroupInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -946,44 +946,44 @@ func (x *D8DReqGroupInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DReqGroupInfo.ProtoReflect.Descriptor instead.
-func (*D8DReqGroupInfo) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88ReqGroupInfo.ProtoReflect.Descriptor instead.
+func (*D88ReqGroupInfo) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *D8DReqGroupInfo) GetUint64GroupCode() uint64 {
+func (x *D88ReqGroupInfo) GetUint64GroupCode() uint64 {
 	if x != nil {
 		return x.Uint64GroupCode
 	}
 	return 0
 }
 
-func (x *D8DReqGroupInfo) GetStgroupinfo() *D8DGroupInfo {
+func (x *D88ReqGroupInfo) GetStgroupinfo() *D88GroupInfo {
 	if x != nil {
 		return x.Stgroupinfo
 	}
 	return nil
 }
 
-func (x *D8DReqGroupInfo) GetUint32LastGetGroupNameTime() uint32 {
+func (x *D88ReqGroupInfo) GetUint32LastGetGroupNameTime() uint32 {
 	if x != nil {
 		return x.Uint32LastGetGroupNameTime
 	}
 	return 0
 }
 
-type D8DReqBody struct {
+type D88ReqBody struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	Uint32Appid           uint32             `protobuf:"varint,1,opt,name=uint32_appid,json=uint32Appid,proto3" json:"uint32_appid,omitempty"`
-	Stzreqgroupinfo       []*D8DReqGroupInfo `protobuf:"bytes,2,rep,name=stzreqgroupinfo,proto3" json:"stzreqgroupinfo,omitempty"`
+	Stzreqgroupinfo       []*D88ReqGroupInfo `protobuf:"bytes,2,rep,name=stzreqgroupinfo,proto3" json:"stzreqgroupinfo,omitempty"`
 	Uint32PcClientVersion uint32             `protobuf:"varint,3,opt,name=uint32_pc_client_version,json=uint32PcClientVersion,proto3" json:"uint32_pc_client_version,omitempty"`
 }
 
-func (x *D8DReqBody) Reset() {
-	*x = D8DReqBody{}
+func (x *D88ReqBody) Reset() {
+	*x = D88ReqBody{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -991,13 +991,13 @@ func (x *D8DReqBody) Reset() {
 	}
 }
 
-func (x *D8DReqBody) String() string {
+func (x *D88ReqBody) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DReqBody) ProtoMessage() {}
+func (*D88ReqBody) ProtoMessage() {}
 
-func (x *D8DReqBody) ProtoReflect() protoreflect.Message {
+func (x *D88ReqBody) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1009,44 +1009,44 @@ func (x *D8DReqBody) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DReqBody.ProtoReflect.Descriptor instead.
-func (*D8DReqBody) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88ReqBody.ProtoReflect.Descriptor instead.
+func (*D88ReqBody) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *D8DReqBody) GetUint32Appid() uint32 {
+func (x *D88ReqBody) GetUint32Appid() uint32 {
 	if x != nil {
 		return x.Uint32Appid
 	}
 	return 0
 }
 
-func (x *D8DReqBody) GetStzreqgroupinfo() []*D8DReqGroupInfo {
+func (x *D88ReqBody) GetStzreqgroupinfo() []*D88ReqGroupInfo {
 	if x != nil {
 		return x.Stzreqgroupinfo
 	}
 	return nil
 }
 
-func (x *D8DReqBody) GetUint32PcClientVersion() uint32 {
+func (x *D88ReqBody) GetUint32PcClientVersion() uint32 {
 	if x != nil {
 		return x.Uint32PcClientVersion
 	}
 	return 0
 }
 
-type D8DRspGroupInfo struct {
+type D88RspGroupInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	Uint64GroupCode uint64        `protobuf:"varint,1,opt,name=uint64_group_code,json=uint64GroupCode,proto3" json:"uint64_group_code,omitempty"`
 	Uint32Result    uint32        `protobuf:"varint,2,opt,name=uint32_result,json=uint32Result,proto3" json:"uint32_result,omitempty"`
-	Stgroupinfo     *D8DGroupInfo `protobuf:"bytes,3,opt,name=stgroupinfo,proto3" json:"stgroupinfo,omitempty"`
+	Stgroupinfo     *D88GroupInfo `protobuf:"bytes,3,opt,name=stgroupinfo,proto3" json:"stgroupinfo,omitempty"`
 }
 
-func (x *D8DRspGroupInfo) Reset() {
-	*x = D8DRspGroupInfo{}
+func (x *D88RspGroupInfo) Reset() {
+	*x = D88RspGroupInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1054,13 +1054,13 @@ func (x *D8DRspGroupInfo) Reset() {
 	}
 }
 
-func (x *D8DRspGroupInfo) String() string {
+func (x *D88RspGroupInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DRspGroupInfo) ProtoMessage() {}
+func (*D88RspGroupInfo) ProtoMessage() {}
 
-func (x *D8DRspGroupInfo) ProtoReflect() protoreflect.Message {
+func (x *D88RspGroupInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1072,43 +1072,43 @@ func (x *D8DRspGroupInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DRspGroupInfo.ProtoReflect.Descriptor instead.
-func (*D8DRspGroupInfo) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88RspGroupInfo.ProtoReflect.Descriptor instead.
+func (*D88RspGroupInfo) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{6}
 }
 
-func (x *D8DRspGroupInfo) GetUint64GroupCode() uint64 {
+func (x *D88RspGroupInfo) GetUint64GroupCode() uint64 {
 	if x != nil {
 		return x.Uint64GroupCode
 	}
 	return 0
 }
 
-func (x *D8DRspGroupInfo) GetUint32Result() uint32 {
+func (x *D88RspGroupInfo) GetUint32Result() uint32 {
 	if x != nil {
 		return x.Uint32Result
 	}
 	return 0
 }
 
-func (x *D8DRspGroupInfo) GetStgroupinfo() *D8DGroupInfo {
+func (x *D88RspGroupInfo) GetStgroupinfo() *D88GroupInfo {
 	if x != nil {
 		return x.Stgroupinfo
 	}
 	return nil
 }
 
-type D8DRspBody struct {
+type D88RspBody struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Stzrspgroupinfo []*D8DRspGroupInfo `protobuf:"bytes,1,rep,name=stzrspgroupinfo,proto3" json:"stzrspgroupinfo,omitempty"`
+	Stzrspgroupinfo []*D88RspGroupInfo `protobuf:"bytes,1,rep,name=stzrspgroupinfo,proto3" json:"stzrspgroupinfo,omitempty"`
 	StrErrorinfo    []byte             `protobuf:"bytes,2,opt,name=str_errorinfo,json=strErrorinfo,proto3" json:"str_errorinfo,omitempty"`
 }
 
-func (x *D8DRspBody) Reset() {
-	*x = D8DRspBody{}
+func (x *D88RspBody) Reset() {
+	*x = D88RspBody{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1116,13 +1116,13 @@ func (x *D8DRspBody) Reset() {
 	}
 }
 
-func (x *D8DRspBody) String() string {
+func (x *D88RspBody) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DRspBody) ProtoMessage() {}
+func (*D88RspBody) ProtoMessage() {}
 
-func (x *D8DRspBody) ProtoReflect() protoreflect.Message {
+func (x *D88RspBody) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1134,26 +1134,26 @@ func (x *D8DRspBody) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DRspBody.ProtoReflect.Descriptor instead.
-func (*D8DRspBody) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88RspBody.ProtoReflect.Descriptor instead.
+func (*D88RspBody) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{7}
 }
 
-func (x *D8DRspBody) GetStzrspgroupinfo() []*D8DRspGroupInfo {
+func (x *D88RspBody) GetStzrspgroupinfo() []*D88RspGroupInfo {
 	if x != nil {
 		return x.Stzrspgroupinfo
 	}
 	return nil
 }
 
-func (x *D8DRspBody) GetStrErrorinfo() []byte {
+func (x *D88RspBody) GetStrErrorinfo() []byte {
 	if x != nil {
 		return x.StrErrorinfo
 	}
 	return nil
 }
 
-type D8DTagRecord struct {
+type D88TagRecord struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -1168,8 +1168,8 @@ type D8DTagRecord struct {
 	BytesTagValue   []byte `protobuf:"bytes,8,opt,name=bytes_tag_value,json=bytesTagValue,proto3" json:"bytes_tag_value,omitempty"`
 }
 
-func (x *D8DTagRecord) Reset() {
-	*x = D8DTagRecord{}
+func (x *D88TagRecord) Reset() {
+	*x = D88TagRecord{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1177,13 +1177,13 @@ func (x *D8DTagRecord) Reset() {
 	}
 }
 
-func (x *D8DTagRecord) String() string {
+func (x *D88TagRecord) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DTagRecord) ProtoMessage() {}
+func (*D88TagRecord) ProtoMessage() {}
 
-func (x *D8DTagRecord) ProtoReflect() protoreflect.Message {
+func (x *D88TagRecord) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1195,68 +1195,68 @@ func (x *D8DTagRecord) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DTagRecord.ProtoReflect.Descriptor instead.
-func (*D8DTagRecord) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88TagRecord.ProtoReflect.Descriptor instead.
+func (*D88TagRecord) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{8}
 }
 
-func (x *D8DTagRecord) GetUint64FromUin() uint64 {
+func (x *D88TagRecord) GetUint64FromUin() uint64 {
 	if x != nil {
 		return x.Uint64FromUin
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetUint64GroupCode() uint64 {
+func (x *D88TagRecord) GetUint64GroupCode() uint64 {
 	if x != nil {
 		return x.Uint64GroupCode
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetBytesTagId() []byte {
+func (x *D88TagRecord) GetBytesTagId() []byte {
 	if x != nil {
 		return x.BytesTagId
 	}
 	return nil
 }
 
-func (x *D8DTagRecord) GetUint64SetTime() uint64 {
+func (x *D88TagRecord) GetUint64SetTime() uint64 {
 	if x != nil {
 		return x.Uint64SetTime
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetUint32GoodNum() uint32 {
+func (x *D88TagRecord) GetUint32GoodNum() uint32 {
 	if x != nil {
 		return x.Uint32GoodNum
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetUint32BadNum() uint32 {
+func (x *D88TagRecord) GetUint32BadNum() uint32 {
 	if x != nil {
 		return x.Uint32BadNum
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetUint32TagLen() uint32 {
+func (x *D88TagRecord) GetUint32TagLen() uint32 {
 	if x != nil {
 		return x.Uint32TagLen
 	}
 	return 0
 }
 
-func (x *D8DTagRecord) GetBytesTagValue() []byte {
+func (x *D88TagRecord) GetBytesTagValue() []byte {
 	if x != nil {
 		return x.BytesTagValue
 	}
 	return nil
 }
 
-type D8DGroupGeoInfo struct {
+type D88GroupGeoInfo struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -1270,8 +1270,8 @@ type D8DGroupGeoInfo struct {
 	Uint64PoiId     uint64 `protobuf:"varint,7,opt,name=uint64_poi_id,json=uint64PoiId,proto3" json:"uint64_poi_id,omitempty"`
 }
 
-func (x *D8DGroupGeoInfo) Reset() {
-	*x = D8DGroupGeoInfo{}
+func (x *D88GroupGeoInfo) Reset() {
+	*x = D88GroupGeoInfo{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_oidb0x88d_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1279,13 +1279,13 @@ func (x *D8DGroupGeoInfo) Reset() {
 	}
 }
 
-func (x *D8DGroupGeoInfo) String() string {
+func (x *D88GroupGeoInfo) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*D8DGroupGeoInfo) ProtoMessage() {}
+func (*D88GroupGeoInfo) ProtoMessage() {}
 
-func (x *D8DGroupGeoInfo) ProtoReflect() protoreflect.Message {
+func (x *D88GroupGeoInfo) ProtoReflect() protoreflect.Message {
 	mi := &file_oidb0x88d_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -1297,54 +1297,54 @@ func (x *D8DGroupGeoInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use D8DGroupGeoInfo.ProtoReflect.Descriptor instead.
-func (*D8DGroupGeoInfo) Descriptor() ([]byte, []int) {
+// Deprecated: Use D88GroupGeoInfo.ProtoReflect.Descriptor instead.
+func (*D88GroupGeoInfo) Descriptor() ([]byte, []int) {
 	return file_oidb0x88d_proto_rawDescGZIP(), []int{9}
 }
 
-func (x *D8DGroupGeoInfo) GetUint64Owneruin() uint64 {
+func (x *D88GroupGeoInfo) GetUint64Owneruin() uint64 {
 	if x != nil {
 		return x.Uint64Owneruin
 	}
 	return 0
 }
 
-func (x *D8DGroupGeoInfo) GetUint32Settime() uint32 {
+func (x *D88GroupGeoInfo) GetUint32Settime() uint32 {
 	if x != nil {
 		return x.Uint32Settime
 	}
 	return 0
 }
 
-func (x *D8DGroupGeoInfo) GetUint32Cityid() uint32 {
+func (x *D88GroupGeoInfo) GetUint32Cityid() uint32 {
 	if x != nil {
 		return x.Uint32Cityid
 	}
 	return 0
 }
 
-func (x *D8DGroupGeoInfo) GetInt64Longitude() int64 {
+func (x *D88GroupGeoInfo) GetInt64Longitude() int64 {
 	if x != nil {
 		return x.Int64Longitude
 	}
 	return 0
 }
 
-func (x *D8DGroupGeoInfo) GetInt64Latitude() int64 {
+func (x *D88GroupGeoInfo) GetInt64Latitude() int64 {
 	if x != nil {
 		return x.Int64Latitude
 	}
 	return 0
 }
 
-func (x *D8DGroupGeoInfo) GetBytesGeocontent() []byte {
+func (x *D88GroupGeoInfo) GetBytesGeocontent() []byte {
 	if x != nil {
 		return x.BytesGeocontent
 	}
 	return nil
 }
 
-func (x *D8DGroupGeoInfo) GetUint64PoiId() uint64 {
+func (x *D88GroupGeoInfo) GetUint64PoiId() uint64 {
 	if x != nil {
 		return x.Uint64PoiId
 	}
@@ -1356,17 +1356,17 @@ var File_oidb0x88d_proto protoreflect.FileDescriptor
 var file_oidb0x88d_proto_rawDesc = []byte{
 	0x0a, 0x0f, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x12, 0x09, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x22, 0x45, 0x0a, 0x18,
-	0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74,
+	0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74,
 	0x72, 0x61, 0x69, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x29, 0x0a, 0x11, 0x72, 0x70, 0x74, 0x5f,
 	0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x70, 0x69, 0x63, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x0d, 0x52, 0x0e, 0x72, 0x70, 0x74, 0x55, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x50, 0x69,
-	0x63, 0x49, 0x64, 0x22, 0xc8, 0x02, 0x0a, 0x14, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70,
+	0x63, 0x49, 0x64, 0x22, 0xc8, 0x02, 0x0a, 0x14, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61, 0x69, 0x74, 0x12, 0x24, 0x0a, 0x0e,
 	0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x70, 0x69, 0x63, 0x5f, 0x63, 0x6e, 0x74, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x0d, 0x52, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x50, 0x69, 0x63, 0x43,
 	0x6e, 0x74, 0x12, 0x45, 0x0a, 0x0c, 0x72, 0x70, 0x74, 0x5f, 0x6d, 0x73, 0x67, 0x5f, 0x69, 0x6e,
 	0x66, 0x6f, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x23, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30,
-	0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61,
+	0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61,
 	0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61, 0x69, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0a, 0x72,
 	0x70, 0x74, 0x4d, 0x73, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2a, 0x0a, 0x11, 0x75, 0x69, 0x6e,
 	0x74, 0x33, 0x32, 0x5f, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x5f, 0x69, 0x64, 0x18, 0x03,
@@ -1378,17 +1378,17 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x0a, 0x19, 0x72, 0x70, 0x74, 0x5f, 0x6d, 0x73, 0x67, 0x5f, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79,
 	0x69, 0x6e, 0x67, 0x70, 0x69, 0x63, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x05, 0x20, 0x03, 0x28,
 	0x0b, 0x32, 0x23, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38,
-	0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61,
+	0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61,
 	0x69, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x16, 0x72, 0x70, 0x74, 0x4d, 0x73, 0x67, 0x56, 0x65,
 	0x72, 0x69, 0x66, 0x79, 0x69, 0x6e, 0x67, 0x70, 0x69, 0x63, 0x49, 0x6e, 0x66, 0x6f, 0x22, 0x78,
-	0x0a, 0x12, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x45, 0x78, 0x49, 0x6e, 0x66, 0x6f,
+	0x0a, 0x12, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x45, 0x78, 0x49, 0x6e, 0x66, 0x6f,
 	0x4f, 0x6e, 0x6c, 0x79, 0x12, 0x26, 0x0a, 0x0f, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x74,
 	0x72, 0x69, 0x62, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0d, 0x75,
 	0x69, 0x6e, 0x74, 0x33, 0x32, 0x54, 0x72, 0x69, 0x62, 0x65, 0x49, 0x64, 0x12, 0x3a, 0x0a, 0x1a,
 	0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x6d, 0x6f, 0x6e, 0x65, 0x79, 0x5f, 0x66, 0x6f, 0x72,
 	0x5f, 0x61, 0x64, 0x64, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d,
 	0x52, 0x16, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x4d, 0x6f, 0x6e, 0x65, 0x79, 0x46, 0x6f, 0x72,
-	0x41, 0x64, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x22, 0x85, 0x25, 0x0a, 0x0c, 0x44, 0x38, 0x44,
+	0x41, 0x64, 0x64, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x22, 0x85, 0x25, 0x0a, 0x0c, 0x44, 0x38, 0x38,
 	0x47, 0x72, 0x6f, 0x75, 0x70, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2c, 0x0a, 0x12, 0x75, 0x69, 0x6e,
 	0x74, 0x36, 0x34, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x10, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x47, 0x72, 0x6f,
@@ -1532,11 +1532,11 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x63, 0x68, 0x46, 0x69, 0x6e, 0x67, 0x65, 0x72, 0x4d, 0x65, 0x6d, 0x6f, 0x12, 0x3d, 0x0a, 0x0e,
 	0x72, 0x70, 0x74, 0x5f, 0x74, 0x61, 0x67, 0x5f, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x18, 0x29,
 	0x20, 0x03, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64,
-	0x2e, 0x44, 0x38, 0x44, 0x54, 0x61, 0x67, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x0c, 0x72,
+	0x2e, 0x44, 0x38, 0x38, 0x54, 0x61, 0x67, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x0c, 0x72,
 	0x70, 0x74, 0x54, 0x61, 0x67, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x40, 0x0a, 0x0e, 0x67,
 	0x72, 0x6f, 0x75, 0x70, 0x5f, 0x67, 0x65, 0x6f, 0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x2a, 0x20,
 	0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e,
-	0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x47, 0x65, 0x6f, 0x49, 0x6e, 0x66, 0x6f, 0x52,
+	0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x47, 0x65, 0x6f, 0x49, 0x6e, 0x66, 0x6f, 0x52,
 	0x0c, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x47, 0x65, 0x6f, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x37, 0x0a,
 	0x18, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x68, 0x65, 0x61, 0x64, 0x5f, 0x70, 0x6f, 0x72,
 	0x74, 0x72, 0x61, 0x69, 0x74, 0x5f, 0x73, 0x65, 0x71, 0x18, 0x2b, 0x20, 0x01, 0x28, 0x0d, 0x52,
@@ -1544,7 +1544,7 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x61, 0x69, 0x74, 0x53, 0x65, 0x71, 0x12, 0x4b, 0x0a, 0x11, 0x6d, 0x73, 0x67, 0x5f, 0x68, 0x65,
 	0x61, 0x64, 0x5f, 0x70, 0x6f, 0x72, 0x74, 0x72, 0x61, 0x69, 0x74, 0x18, 0x2c, 0x20, 0x01, 0x28,
 	0x0b, 0x32, 0x1f, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38,
-	0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61,
+	0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72, 0x61,
 	0x69, 0x74, 0x52, 0x0f, 0x6d, 0x73, 0x67, 0x48, 0x65, 0x61, 0x64, 0x50, 0x6f, 0x72, 0x74, 0x72,
 	0x61, 0x69, 0x74, 0x12, 0x36, 0x0a, 0x17, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x73, 0x68,
 	0x75, 0x74, 0x75, 0x70, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x18, 0x2d,
@@ -1591,7 +1591,7 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x32, 0x41, 0x70, 0x70, 0x50, 0x72, 0x69, 0x76, 0x69, 0x6c, 0x65, 0x67, 0x65, 0x46, 0x6c, 0x61,
 	0x67, 0x12, 0x46, 0x0a, 0x10, 0x73, 0x74, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x65, 0x78,
 	0x5f, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x39, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x6f, 0x69,
-	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70,
+	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x45, 0x78, 0x49, 0x6e, 0x66, 0x6f, 0x4f, 0x6e, 0x6c, 0x79, 0x52, 0x0d, 0x73, 0x74, 0x47, 0x72,
 	0x6f, 0x75, 0x70, 0x45, 0x78, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x33, 0x0a, 0x16, 0x75, 0x69, 0x6e,
 	0x74, 0x33, 0x32, 0x5f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x73, 0x65, 0x63, 0x5f, 0x6c, 0x65,
@@ -1685,30 +1685,30 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x6e, 0x67, 0x65, 0x72, 0x5f, 0x6f, 0x70, 0x65, 0x6e, 0x5f, 0x66, 0x6c, 0x61, 0x67, 0x18, 0x53,
 	0x20, 0x01, 0x28, 0x0d, 0x52, 0x1a, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x4e, 0x6f, 0x43, 0x6f,
 	0x64, 0x65, 0x46, 0x69, 0x6e, 0x67, 0x65, 0x72, 0x4f, 0x70, 0x65, 0x6e, 0x46, 0x6c, 0x61, 0x67,
-	0x22, 0xbd, 0x01, 0x0a, 0x0f, 0x44, 0x38, 0x44, 0x52, 0x65, 0x71, 0x47, 0x72, 0x6f, 0x75, 0x70,
+	0x22, 0xbd, 0x01, 0x0a, 0x0f, 0x44, 0x38, 0x38, 0x52, 0x65, 0x71, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2a, 0x0a, 0x11, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x67,
 	0x72, 0x6f, 0x75, 0x70, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52,
 	0x0f, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x6f, 0x64, 0x65,
 	0x12, 0x39, 0x0a, 0x0b, 0x73, 0x74, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x69, 0x6e, 0x66, 0x6f, 0x18,
 	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30, 0x78, 0x38, 0x38,
-	0x64, 0x2e, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0b,
+	0x64, 0x2e, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0b,
 	0x73, 0x74, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x69, 0x6e, 0x66, 0x6f, 0x12, 0x43, 0x0a, 0x1f, 0x75,
 	0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x67, 0x65, 0x74, 0x5f, 0x67,
 	0x72, 0x6f, 0x75, 0x70, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x0d, 0x52, 0x1a, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x4c, 0x61, 0x73, 0x74,
 	0x47, 0x65, 0x74, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x4e, 0x61, 0x6d, 0x65, 0x54, 0x69, 0x6d, 0x65,
-	0x22, 0xae, 0x01, 0x0a, 0x0a, 0x44, 0x38, 0x44, 0x52, 0x65, 0x71, 0x42, 0x6f, 0x64, 0x79, 0x12,
+	0x22, 0xae, 0x01, 0x0a, 0x0a, 0x44, 0x38, 0x38, 0x52, 0x65, 0x71, 0x42, 0x6f, 0x64, 0x79, 0x12,
 	0x21, 0x0a, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x5f, 0x61, 0x70, 0x70, 0x69, 0x64, 0x18,
 	0x01, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0b, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x41, 0x70, 0x70,
 	0x69, 0x64, 0x12, 0x44, 0x0a, 0x0f, 0x73, 0x74, 0x7a, 0x72, 0x65, 0x71, 0x67, 0x72, 0x6f, 0x75,
 	0x70, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6f, 0x69,
-	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x44, 0x52, 0x65, 0x71, 0x47, 0x72,
+	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x38, 0x52, 0x65, 0x71, 0x47, 0x72,
 	0x6f, 0x75, 0x70, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0f, 0x73, 0x74, 0x7a, 0x72, 0x65, 0x71, 0x67,
 	0x72, 0x6f, 0x75, 0x70, 0x69, 0x6e, 0x66, 0x6f, 0x12, 0x37, 0x0a, 0x18, 0x75, 0x69, 0x6e, 0x74,
 	0x33, 0x32, 0x5f, 0x70, 0x63, 0x5f, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x5f, 0x76, 0x65, 0x72,
 	0x73, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x15, 0x75, 0x69, 0x6e, 0x74,
 	0x33, 0x32, 0x50, 0x63, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f,
-	0x6e, 0x22, 0x9d, 0x01, 0x0a, 0x0f, 0x44, 0x38, 0x44, 0x52, 0x73, 0x70, 0x47, 0x72, 0x6f, 0x75,
+	0x6e, 0x22, 0x9d, 0x01, 0x0a, 0x0f, 0x44, 0x38, 0x38, 0x52, 0x73, 0x70, 0x47, 0x72, 0x6f, 0x75,
 	0x70, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x2a, 0x0a, 0x11, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f,
 	0x67, 0x72, 0x6f, 0x75, 0x70, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04,
 	0x52, 0x0f, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x43, 0x6f, 0x64,
@@ -1716,17 +1716,17 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x6c, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0d, 0x52, 0x0c, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32,
 	0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x39, 0x0a, 0x0b, 0x73, 0x74, 0x67, 0x72, 0x6f, 0x75,
 	0x70, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x17, 0x2e, 0x6f, 0x69,
-	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f, 0x75, 0x70,
+	0x64, 0x62, 0x30, 0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0b, 0x73, 0x74, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x69, 0x6e, 0x66,
-	0x6f, 0x22, 0x77, 0x0a, 0x0a, 0x44, 0x38, 0x44, 0x52, 0x73, 0x70, 0x42, 0x6f, 0x64, 0x79, 0x12,
+	0x6f, 0x22, 0x77, 0x0a, 0x0a, 0x44, 0x38, 0x38, 0x52, 0x73, 0x70, 0x42, 0x6f, 0x64, 0x79, 0x12,
 	0x44, 0x0a, 0x0f, 0x73, 0x74, 0x7a, 0x72, 0x73, 0x70, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x69, 0x6e,
 	0x66, 0x6f, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x6f, 0x69, 0x64, 0x62, 0x30,
-	0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x44, 0x52, 0x73, 0x70, 0x47, 0x72, 0x6f, 0x75, 0x70,
+	0x78, 0x38, 0x38, 0x64, 0x2e, 0x44, 0x38, 0x38, 0x52, 0x73, 0x70, 0x47, 0x72, 0x6f, 0x75, 0x70,
 	0x49, 0x6e, 0x66, 0x6f, 0x52, 0x0f, 0x73, 0x74, 0x7a, 0x72, 0x73, 0x70, 0x67, 0x72, 0x6f, 0x75,
 	0x70, 0x69, 0x6e, 0x66, 0x6f, 0x12, 0x23, 0x0a, 0x0d, 0x73, 0x74, 0x72, 0x5f, 0x65, 0x72, 0x72,
 	0x6f, 0x72, 0x69, 0x6e, 0x66, 0x6f, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x0c, 0x73, 0x74,
 	0x72, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x69, 0x6e, 0x66, 0x6f, 0x22, 0xc8, 0x02, 0x0a, 0x0c, 0x44,
-	0x38, 0x44, 0x54, 0x61, 0x67, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x26, 0x0a, 0x0f, 0x75,
+	0x38, 0x38, 0x54, 0x61, 0x67, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x12, 0x26, 0x0a, 0x0f, 0x75,
 	0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x66, 0x72, 0x6f, 0x6d, 0x5f, 0x75, 0x69, 0x6e, 0x18, 0x01,
 	0x20, 0x01, 0x28, 0x04, 0x52, 0x0d, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x46, 0x72, 0x6f, 0x6d,
 	0x55, 0x69, 0x6e, 0x12, 0x2a, 0x0a, 0x11, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x5f, 0x67, 0x72,
@@ -1746,7 +1746,7 @@ var file_oidb0x88d_proto_rawDesc = []byte{
 	0x0c, 0x75, 0x69, 0x6e, 0x74, 0x33, 0x32, 0x54, 0x61, 0x67, 0x4c, 0x65, 0x6e, 0x12, 0x26, 0x0a,
 	0x0f, 0x62, 0x79, 0x74, 0x65, 0x73, 0x5f, 0x74, 0x61, 0x67, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65,
 	0x18, 0x08, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x0d, 0x62, 0x79, 0x74, 0x65, 0x73, 0x54, 0x61, 0x67,
-	0x56, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xa5, 0x02, 0x0a, 0x0f, 0x44, 0x38, 0x44, 0x47, 0x72, 0x6f,
+	0x56, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xa5, 0x02, 0x0a, 0x0f, 0x44, 0x38, 0x38, 0x47, 0x72, 0x6f,
 	0x75, 0x70, 0x47, 0x65, 0x6f, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x27, 0x0a, 0x0f, 0x75, 0x69, 0x6e,
 	0x74, 0x36, 0x34, 0x5f, 0x6f, 0x77, 0x6e, 0x65, 0x72, 0x75, 0x69, 0x6e, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x04, 0x52, 0x0e, 0x75, 0x69, 0x6e, 0x74, 0x36, 0x34, 0x4f, 0x77, 0x6e, 0x65, 0x72, 0x75,
@@ -1782,28 +1782,28 @@ func file_oidb0x88d_proto_rawDescGZIP() []byte {
 
 var file_oidb0x88d_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_oidb0x88d_proto_goTypes = []interface{}{
-	(*D8DGroupHeadPortraitInfo)(nil), // 0: oidb0x88d.D8DGroupHeadPortraitInfo
-	(*D8DGroupHeadPortrait)(nil),     // 1: oidb0x88d.D8DGroupHeadPortrait
-	(*D8DGroupExInfoOnly)(nil),       // 2: oidb0x88d.D8DGroupExInfoOnly
-	(*D8DGroupInfo)(nil),             // 3: oidb0x88d.D8DGroupInfo
-	(*D8DReqGroupInfo)(nil),          // 4: oidb0x88d.D8DReqGroupInfo
-	(*D8DReqBody)(nil),               // 5: oidb0x88d.D8DReqBody
-	(*D8DRspGroupInfo)(nil),          // 6: oidb0x88d.D8DRspGroupInfo
-	(*D8DRspBody)(nil),               // 7: oidb0x88d.D8DRspBody
-	(*D8DTagRecord)(nil),             // 8: oidb0x88d.D8DTagRecord
-	(*D8DGroupGeoInfo)(nil),          // 9: oidb0x88d.D8DGroupGeoInfo
+	(*D88GroupHeadPortraitInfo)(nil), // 0: oidb0x88d.D88GroupHeadPortraitInfo
+	(*D88GroupHeadPortrait)(nil),     // 1: oidb0x88d.D88GroupHeadPortrait
+	(*D88GroupExInfoOnly)(nil),       // 2: oidb0x88d.D88GroupExInfoOnly
+	(*D88GroupInfo)(nil),             // 3: oidb0x88d.D88GroupInfo
+	(*D88ReqGroupInfo)(nil),          // 4: oidb0x88d.D88ReqGroupInfo
+	(*D88ReqBody)(nil),               // 5: oidb0x88d.D88ReqBody
+	(*D88RspGroupInfo)(nil),          // 6: oidb0x88d.D88RspGroupInfo
+	(*D88RspBody)(nil),               // 7: oidb0x88d.D88RspBody
+	(*D88TagRecord)(nil),             // 8: oidb0x88d.D88TagRecord
+	(*D88GroupGeoInfo)(nil),          // 9: oidb0x88d.D88GroupGeoInfo
 }
 var file_oidb0x88d_proto_depIdxs = []int32{
-	0,  // 0: oidb0x88d.D8DGroupHeadPortrait.rpt_msg_info:type_name -> oidb0x88d.D8DGroupHeadPortraitInfo
-	0,  // 1: oidb0x88d.D8DGroupHeadPortrait.rpt_msg_verifyingpic_info:type_name -> oidb0x88d.D8DGroupHeadPortraitInfo
-	8,  // 2: oidb0x88d.D8DGroupInfo.rpt_tag_record:type_name -> oidb0x88d.D8DTagRecord
-	9,  // 3: oidb0x88d.D8DGroupInfo.group_geo_info:type_name -> oidb0x88d.D8DGroupGeoInfo
-	1,  // 4: oidb0x88d.D8DGroupInfo.msg_head_portrait:type_name -> oidb0x88d.D8DGroupHeadPortrait
-	2,  // 5: oidb0x88d.D8DGroupInfo.st_group_ex_info:type_name -> oidb0x88d.D8DGroupExInfoOnly
-	3,  // 6: oidb0x88d.D8DReqGroupInfo.stgroupinfo:type_name -> oidb0x88d.D8DGroupInfo
-	4,  // 7: oidb0x88d.D8DReqBody.stzreqgroupinfo:type_name -> oidb0x88d.D8DReqGroupInfo
-	3,  // 8: oidb0x88d.D8DRspGroupInfo.stgroupinfo:type_name -> oidb0x88d.D8DGroupInfo
-	6,  // 9: oidb0x88d.D8DRspBody.stzrspgroupinfo:type_name -> oidb0x88d.D8DRspGroupInfo
+	0,  // 0: oidb0x88d.D88GroupHeadPortrait.rpt_msg_info:type_name -> oidb0x88d.D88GroupHeadPortraitInfo
+	0,  // 1: oidb0x88d.D88GroupHeadPortrait.rpt_msg_verifyingpic_info:type_name -> oidb0x88d.D88GroupHeadPortraitInfo
+	8,  // 2: oidb0x88d.D88GroupInfo.rpt_tag_record:type_name -> oidb0x88d.D88TagRecord
+	9,  // 3: oidb0x88d.D88GroupInfo.group_geo_info:type_name -> oidb0x88d.D88GroupGeoInfo
+	1,  // 4: oidb0x88d.D88GroupInfo.msg_head_portrait:type_name -> oidb0x88d.D88GroupHeadPortrait
+	2,  // 5: oidb0x88d.D88GroupInfo.st_group_ex_info:type_name -> oidb0x88d.D88GroupExInfoOnly
+	3,  // 6: oidb0x88d.D88ReqGroupInfo.stgroupinfo:type_name -> oidb0x88d.D88GroupInfo
+	4,  // 7: oidb0x88d.D88ReqBody.stzreqgroupinfo:type_name -> oidb0x88d.D88ReqGroupInfo
+	3,  // 8: oidb0x88d.D88RspGroupInfo.stgroupinfo:type_name -> oidb0x88d.D88GroupInfo
+	6,  // 9: oidb0x88d.D88RspBody.stzrspgroupinfo:type_name -> oidb0x88d.D88RspGroupInfo
 	10, // [10:10] is the sub-list for method output_type
 	10, // [10:10] is the sub-list for method input_type
 	10, // [10:10] is the sub-list for extension type_name
@@ -1818,7 +1818,7 @@ func file_oidb0x88d_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_oidb0x88d_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DGroupHeadPortraitInfo); i {
+			switch v := v.(*D88GroupHeadPortraitInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1830,7 +1830,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DGroupHeadPortrait); i {
+			switch v := v.(*D88GroupHeadPortrait); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1842,7 +1842,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DGroupExInfoOnly); i {
+			switch v := v.(*D88GroupExInfoOnly); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1854,7 +1854,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DGroupInfo); i {
+			switch v := v.(*D88GroupInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1866,7 +1866,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DReqGroupInfo); i {
+			switch v := v.(*D88ReqGroupInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1878,7 +1878,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DReqBody); i {
+			switch v := v.(*D88ReqBody); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1890,7 +1890,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DRspGroupInfo); i {
+			switch v := v.(*D88RspGroupInfo); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1902,7 +1902,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DRspBody); i {
+			switch v := v.(*D88RspBody); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1914,7 +1914,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DTagRecord); i {
+			switch v := v.(*D88TagRecord); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1926,7 +1926,7 @@ func file_oidb0x88d_proto_init() {
 			}
 		}
 		file_oidb0x88d_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*D8DGroupGeoInfo); i {
+			switch v := v.(*D88GroupGeoInfo); i {
 			case 0:
 				return &v.state
 			case 1:
