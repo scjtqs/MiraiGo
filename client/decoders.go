@@ -4,6 +4,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
+	"github.com/Mrs4s/MiraiGo/client/pb/notify"
 	"github.com/Mrs4s/MiraiGo/client/pb/pttcenter"
 	"log"
 	"net"
@@ -262,6 +263,7 @@ func decodeMessageSvcPacket(c *QQClient, _ uint16, payload []byte) (interface{},
 	}
 	_, _ = c.sendAndWait(c.buildDeleteMessageRequestPacket(delItems))
 	if rsp.SyncFlag != msg.SyncFlag_STOP {
+		c.Debug("continue sync with flag: %v", rsp.SyncFlag.String())
 		_, _ = c.sendAndWait(c.buildGetMessageRequestPacket(rsp.SyncFlag, time.Now().Unix()))
 	}
 	return nil, err
@@ -541,21 +543,49 @@ func decodeOnlinePushReqPacket(c *QQClient, seq uint16, payload []byte) (interfa
 					TargetUin:   target,
 					Time:        t,
 				})
-			case 0x11: // 撤回消息
+			case 0x10, 0x11, 0x14: // group notify msg
 				r.ReadByte()
-				b := pb.NotifyMsgBody{}
+				b := notify.NotifyMsgBody{}
 				_ = proto.Unmarshal(r.ReadAvailable(), &b)
-				if b.OptMsgRecall == nil {
-					continue
+				if b.OptMsgRecall != nil {
+					for _, rm := range b.OptMsgRecall.RecalledMsgList {
+						c.dispatchGroupMessageRecalledEvent(&GroupMessageRecalledEvent{
+							GroupCode:   groupId,
+							OperatorUin: b.OptMsgRecall.Uin,
+							AuthorUin:   rm.AuthorUin,
+							MessageId:   rm.Seq,
+							Time:        rm.Time,
+						})
+					}
 				}
-				for _, rm := range b.OptMsgRecall.RecalledMsgList {
-					c.dispatchGroupMessageRecalledEvent(&GroupMessageRecalledEvent{
-						GroupCode:   groupId,
-						OperatorUin: b.OptMsgRecall.Uin,
-						AuthorUin:   rm.AuthorUin,
-						MessageId:   rm.Seq,
-						Time:        rm.Time,
-					})
+				if b.OptGeneralGrayTip != nil {
+					switch b.OptGeneralGrayTip.TemplId {
+					case 10043, 1136: // 戳一戳
+						var sender int64 = 0
+						receiver := c.Uin
+						for _, templ := range b.OptGeneralGrayTip.MsgTemplParam {
+							if templ.Name == "uin_str1" {
+								sender, _ = strconv.ParseInt(templ.Value, 10, 64)
+							}
+							if templ.Name == "uin_str2" {
+								receiver, _ = strconv.ParseInt(templ.Value, 10, 64)
+							}
+						}
+						c.dispatchGroupNotifyEvent(&GroupPokeNotifyEvent{
+							GroupCode: groupId,
+							Sender:    sender,
+							Receiver:  receiver,
+						})
+					}
+				}
+				if b.OptMsgRedTips != nil {
+					if b.OptMsgRedTips.LuckyFlag == 1 { // 运气王提示
+						c.dispatchGroupNotifyEvent(&GroupRedBagLuckyKingNotifyEvent{
+							GroupCode: groupId,
+							Sender:    int64(b.OptMsgRedTips.SenderUin),
+							LuckyKing: int64(b.OptMsgRedTips.ReceiverUin),
+						})
+					}
 				}
 			}
 		}

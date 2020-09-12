@@ -526,6 +526,10 @@ func (c *QQClient) sendGroupLongOrForwardMessage(groupCode int64, isLong bool, m
 	return nil
 }
 
+func (c *QQClient) sendGroupPoke(groupCode, target int64) {
+	_, _ = c.sendAndWait(c.buildGroupPokePacket(groupCode, target))
+}
+
 func (c *QQClient) RecallGroupMessage(groupCode int64, msgId, msgInternalId int32) {
 	_, pkt := c.buildGroupRecallPacket(groupCode, msgId, msgInternalId)
 	_ = c.send(pkt)
@@ -881,7 +885,10 @@ func (c *QQClient) connect() error {
 	c.Info("connect to server: %v", c.server.String())
 	conn, err := net.DialTCP("tcp", nil, c.server)
 	if err != nil {
-		c.CustomServer = nil
+		if c.CustomServer != nil {
+			c.CustomServer = nil
+			return c.connect()
+		}
 		return err
 	}
 	c.ConnectTime = time.Now()
@@ -1045,9 +1052,11 @@ func (c *QQClient) startHeartbeat() {
 func (c *QQClient) doHeartbeat() {
 	if c.Online {
 		seq := c.nextSeq()
-		sso := packets.BuildSsoPacket(seq, "Heartbeat.Alive", SystemDeviceInfo.IMEI, []byte{}, c.OutGoingPacketSessionId, []byte{}, c.ksid)
+		sso := packets.BuildSsoPacket(seq, uint32(SystemDeviceInfo.Protocol), "Heartbeat.Alive", SystemDeviceInfo.IMEI, []byte{}, c.OutGoingPacketSessionId, []byte{}, c.ksid)
 		packet := packets.BuildLoginPacket(c.Uin, 0, []byte{}, sso, []byte{})
 		_, _ = c.sendAndWait(seq, packet)
+		_, pkt := c.buildGetMessageRequestPacket(msg.SyncFlag_START, time.Now().Unix())
+		c.send(pkt)
 		time.AfterFunc(30*time.Second, c.doHeartbeat)
 	}
 }

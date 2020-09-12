@@ -12,7 +12,6 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-	"fmt"
 )
 
 type (
@@ -85,7 +84,7 @@ const (
 	Voice
 	Video
 	LightApp
-	CustomFace
+	RedBag
 )
 
 func (s *Sender) IsAnonymous() bool {
@@ -141,6 +140,8 @@ func (msg *GroupMessage) ToString() (res string) {
 			res += "[Image: " + e.ImageId + "]"
 		case *AtElement:
 			res += e.Display
+		case *RedBagElement:
+			res += "[RedBag:" + e.Title + "]"
 		case *ReplyElement:
 			res += "[Reply:" + strconv.FormatInt(int64(e.ReplySeq), 10) + "]"
 		}
@@ -419,7 +420,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 	var res []IMessageElement
 	for _, elem := range elems {
 		if elem.SrcMsg != nil {
-			println(fmt.Sprint("SrcMsg %+v", elem.SrcMsg))
 			if len(elem.SrcMsg.OrigSeqs) != 0 {
 				r := &ReplyElement{
 					ReplySeq: elem.SrcMsg.OrigSeqs[0],
@@ -432,7 +432,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			continue
 		}
 		if elem.TransElemInfo != nil {
-			println(fmt.Sprint("TransElemInfo %+v", elem.TransElemInfo))
 			if elem.TransElemInfo.ElemType == 24 { // QFile
 				i3 := len(elem.TransElemInfo.ElemValue)
 				r := binary.NewReader(elem.TransElemInfo.ElemValue)
@@ -454,7 +453,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			}
 		}
 		if elem.LightApp != nil && len(elem.LightApp.Data) > 1 {
-			println(fmt.Sprint("LightApp %+v", elem.LightApp))
 			var content string
 			if elem.LightApp.Data[0] == 0 {
 				content = string(elem.LightApp.Data[1:])
@@ -476,7 +474,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			})
 		}
 		if elem.Text != nil {
-			println(fmt.Sprint("Text %+v", elem.Text))
 			if len(elem.Text.Attr6Buf) == 0 {
 				res = append(res, NewText(func() string {
 					// 这么处理应该没问题
@@ -493,7 +490,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			}
 		}
 		if elem.RichMsg != nil {
-			println(fmt.Sprint("RichMsg %+v", elem.RichMsg))
 			var content string
 			if elem.RichMsg.Template1[0] == 0 {
 				content = string(elem.RichMsg.Template1[1:])
@@ -523,7 +519,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			}
 		}
 		if elem.CustomFace != nil {
-			println(fmt.Sprint("CustomFace %+v", elem.CustomFace))
 			res = append(res, &ImageElement{
 				Filename: elem.CustomFace.FilePath,
 				Size:     elem.CustomFace.Size,
@@ -537,7 +532,6 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 			})
 		}
 		if elem.NotOnlineImage != nil {
-			println(fmt.Sprint("NotOnlineImage %+v", elem.NotOnlineImage))
 			var img string
 			if elem.NotOnlineImage.OrigUrl != "" {
 				img = "http://c2cpicdw.qpic.cn" + elem.NotOnlineImage.OrigUrl
@@ -551,11 +545,19 @@ func ParseMessageElems(elems []*msg.Elem) []IMessageElement {
 				Md5:      elem.NotOnlineImage.PicMd5,
 			})
 		}
+		if elem.QQWalletMsg != nil && elem.QQWalletMsg.AioBody != nil {
+			msgType := elem.QQWalletMsg.AioBody.MsgType
+			if msgType == 2 || msgType == 3 || msgType == 6 {
+				return []IMessageElement{
+					&RedBagElement{
+						MsgType: RedBagMessageType(msgType),
+						Title:   elem.QQWalletMsg.AioBody.Receiver.Title,
+					},
+				}
+			}
+		}
 		if elem.Face != nil {
 			res = append(res, NewFace(elem.Face.Index))
-		}
-		if elem.CustomFace != nil {
-			println(fmt.Sprint("elem %+v", elem))
 		}
 	}
 	return res

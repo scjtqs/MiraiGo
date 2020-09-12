@@ -16,6 +16,8 @@ type (
 
 	MemberPermission int
 
+	ClientProtocol int
+
 	LoginResponse struct {
 		Success bool
 		Error   LoginError
@@ -101,6 +103,12 @@ type (
 	MemberJoinGroupEvent struct {
 		Group  *GroupInfo
 		Member *GroupMemberInfo
+	}
+
+	IGroupNotifyEvent interface {
+		From() int64
+		Name() string
+		Content() string
 	}
 
 	MemberLeaveGroupEvent struct {
@@ -209,6 +217,10 @@ const (
 	Owner MemberPermission = iota
 	Administrator
 	Member
+
+	AndroidPhone ClientProtocol = 537062845
+	AndroidPad   ClientProtocol = 537062409
+	AndroidWatch ClientProtocol = 537061176
 )
 
 func (g *GroupInfo) UpdateName(newName string) {
@@ -249,6 +261,10 @@ func (m *GroupMemberInfo) EditCard(card string) {
 		m.Group.client.editMemberCard(m.Group.Code, m.Uin, card)
 		m.CardName = card
 	}
+}
+
+func (m *GroupMemberInfo) Poke() {
+	m.Group.client.sendGroupPoke(m.Group.Code, m.Uin)
 }
 
 func (m *GroupMemberInfo) SetAdmin(flag bool) {
