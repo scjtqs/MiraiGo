@@ -4,13 +4,13 @@ option go_package = ".;oidb";
 
 package oidb0x89a;
 
-message GroupNewGuidelinesInfo
+message A89GroupNewGuidelinesInfo
 {
     bool  bool_enabled   =  1; 
     bytes string_content =  2; 
 };
 
-message GroupGeoInfo
+message A89GroupGeoInfo
 {
     uint32 uint32_city_id     = 1; 
     uint64 uint64_longtitude  = 2; 
@@ -19,13 +19,13 @@ message GroupGeoInfo
 	uint64 uint64_poi_id = 5;
 };
 
-message GroupExInfoOnly 
+message A89GroupExInfoOnly
 {
     uint32 uint32_tribe_id = 1; 
     uint32 uint32_money_for_add_group = 2; 
 };
 
-message Groupinfo
+message A89Groupinfo
 {
     uint32 uint32_group_ext_adm_num = 1; 
     uint32 uint32_flag              = 2; 
@@ -40,18 +40,18 @@ message Groupinfo
     uint32 uint32_certification_type   = 11;   
     bytes  string_certification_text   = 12;   
     bytes  string_group_rich_finger_memo          = 13; 
-    GroupNewGuidelinesInfo st_group_newguidelines = 14; 
+    A89GroupNewGuidelinesInfo st_group_newguidelines = 14;
     uint32 uint32_group_face  = 15;   
     uint32 uint32_add_option  = 16;   
     uint32 uint32_shutup_time = 17; 
     uint32 uint32_group_type_flag    = 18; 
     repeated bytes  rpt_string_group_tag      = 19; 
-    GroupGeoInfo msg_group_geo_info  = 20; 
+    A89GroupGeoInfo msg_group_geo_info  = 20;
     uint32 uint32_group_class_ext    = 21; 
     bytes  string_group_class_text   = 22; 
     uint32 uint32_app_privilege_flag = 23; 
     uint32 uint32_app_privilege_mask = 24; 
-    GroupExInfoOnly st_group_ex_info = 25; 
+    A89GroupExInfoOnly st_group_ex_info = 25;
 	  uint32 uint32_group_sec_level    = 26; 
 	  uint32 uint32_group_sec_level_info = 27; 
     uint64 uint64_subscription_uin   = 28;
@@ -67,15 +67,15 @@ message Groupinfo
 	  uint64 uint64_root_id = 37;
 };
 
-message ReqBody
+message A89ReqBody
 {
     uint64 uint64_group_code = 1; 
-    Groupinfo st_group_info  = 2; 
+    A89Groupinfo st_group_info  = 2;
     uint64 uint64_original_operator_uin = 3;
 	uint32 uint32_req_group_open_appid = 4;
 };
 
-message RspBody
+message A89RspBody
 {
     uint64 uint64_group_code = 1; 
     bytes  str_errorinfo     = 2; 

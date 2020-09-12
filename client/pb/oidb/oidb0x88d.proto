@@ -4,27 +4,27 @@ option go_package = ".;oidb";
 
 package oidb0x88d;
 
-message GroupHeadPortraitInfo
+message D8DGroupHeadPortraitInfo
 {
     uint32 rpt_uint32_pic_id	= 1;	
 }
 
-message GroupHeadPortrait
+message D8DGroupHeadPortrait
 {
     uint32 uint32_pic_cnt		= 1;    
-    repeated GroupHeadPortraitInfo rpt_msg_info	= 2;	
+    repeated D8DGroupHeadPortraitInfo rpt_msg_info	= 2;
     uint32 uint32_default_id	= 3;   
 	uint32 uint32_verifying_pic_cnt    = 4;
-	repeated GroupHeadPortraitInfo rpt_msg_verifyingpic_info = 5;
+	repeated D8DGroupHeadPortraitInfo rpt_msg_verifyingpic_info = 5;
 }
 
-message GroupExInfoOnly
+message D8DGroupExInfoOnly
 {
     uint32 uint32_tribe_id = 1; 
 	uint32 uint32_money_for_add_group   = 2;
 };
 
-message GroupInfo
+message D8DGroupInfo
 {
     uint64 uint64_group_owner           = 1; 
     uint32 uint32_group_create_time     = 2; 
@@ -69,10 +69,10 @@ message GroupInfo
     uint32 uint32_certification_type   = 38;   
     bytes  string_certification_text   = 39;   
     bytes  string_group_rich_finger_memo   = 40;   
-    repeated TagRecord rpt_tag_record            = 41;   
-    GroupGeoInfo group_geo_info         = 42;   
+    repeated D8DTagRecord rpt_tag_record            = 41;
+    D8DGroupGeoInfo group_geo_info         = 42;
     uint32 uint32_head_portrait_seq     = 43;	
-    GroupHeadPortrait msg_head_portrait = 44;	
+    D8DGroupHeadPortrait msg_head_portrait = 44;
 
     uint32 uint32_shutup_timestamp      = 45 ;  
     uint32 uint32_shutup_timestamp_me   = 46 ;  
@@ -87,7 +87,7 @@ message GroupInfo
     uint32 uint32_cmduin_last_msg_time  = 54;   
     uint32 uint32_group_type_flag       = 55; 
     uint32 uint32_app_privilege_flag    = 56; 
-    GroupExInfoOnly st_group_ex_info    = 57; 
+    D8DGroupExInfoOnly st_group_ex_info    = 57;
     uint32 uint32_group_sec_level       = 58; 
     uint32 uint32_group_sec_level_info  = 59; 
     uint32 uint32_cmduin_privilege      = 60;   
@@ -118,34 +118,34 @@ message GroupInfo
 	  uint32 uint32_no_code_finger_open_flag = 83;     
 };
 
-message ReqGroupInfo
+message D8DReqGroupInfo
 {
     uint64 uint64_group_code = 1; 
-    GroupInfo stgroupinfo    = 2; 
+    D8DGroupInfo stgroupinfo    = 2;
     uint32 uint32_last_get_group_name_time = 3;  
 };
 
-message ReqBody
+message D8DReqBody
 {
     uint32 uint32_appid          = 1; 
-    repeated ReqGroupInfo stzreqgroupinfo = 2; 
+    repeated D8DReqGroupInfo stzreqgroupinfo = 2;
 	uint32 uint32_pc_client_version = 3;
 };
 
-message RspGroupInfo
+message D8DRspGroupInfo
 {
     uint64 uint64_group_code = 1; 
     uint32 uint32_result     = 2; 
-    GroupInfo stgroupinfo    = 3; 
+    D8DGroupInfo stgroupinfo    = 3;
 };
 
-message RspBody
+message D8DRspBody
 {
-    repeated RspGroupInfo stzrspgroupinfo = 1; 
+    repeated D8DRspGroupInfo stzrspgroupinfo = 1;
     bytes  str_errorinfo         = 2;   
 };
 
-message TagRecord
+message D8DTagRecord
 {
     uint64 uint64_from_uin             = 1;
     uint64 uint64_group_code           = 2;
@@ -157,7 +157,7 @@ message TagRecord
     bytes  bytes_tag_value             = 8;
 };
 
-message GroupGeoInfo
+message D8DGroupGeoInfo
 {
     uint64 uint64_owneruin = 1;
     uint32 uint32_settime = 2;
