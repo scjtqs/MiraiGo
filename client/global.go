@@ -267,7 +267,22 @@ func (c *QQClient) parseTempMessage(msg *msg.Message) *message.TempMessage {
 func (c *QQClient) parseGroupMessage(m *msg.Message) *message.GroupMessage {
 	group := c.FindGroup(m.Head.GroupInfo.GroupCode)
 	if group == nil {
-		return nil
+		c.Debug("sync group %v.", m.Head.GroupInfo.GroupCode)
+		info, err := c.GetGroupInfo(m.Head.GroupInfo.GroupCode)
+		if err != nil {
+			c.Error("error to sync group %v : %v", m.Head.GroupInfo.GroupCode, err)
+			return nil
+		}
+		group = info
+		c.GroupList = append(c.GroupList, info)
+	}
+	if len(group.Members) == 0 {
+		mem, err := c.GetGroupMembers(group)
+		if err != nil {
+			c.Error("error to sync group %v member : %v", m.Head.GroupInfo.GroupCode, err)
+			return nil
+		}
+		group.Members = mem
 	}
 	var anonInfo *msg.AnonymousGroupMessage
 	for _, e := range m.Body.RichText.Elems {
@@ -285,7 +300,16 @@ func (c *QQClient) parseGroupMessage(m *msg.Message) *message.GroupMessage {
 	} else {
 		mem := group.FindMember(m.Head.FromUin)
 		if mem == nil {
-			return nil
+			info, _ := c.getMemberInfo(group.Code, m.Head.FromUin)
+			if info == nil {
+				return nil
+			}
+			group.Members = append(group.Members, mem)
+			mem = info
+			go c.dispatchNewMemberEvent(&MemberJoinGroupEvent{
+				Group:  group,
+				Member: info,
+			})
 		}
 		sender = &message.Sender{
 			Uin:      mem.Uin,
@@ -305,10 +329,6 @@ func (c *QQClient) parseGroupMessage(m *msg.Message) *message.GroupMessage {
 	}
 	// pre parse
 	for _, elem := range m.Body.RichText.Elems {
-		// 为什么小程序会同时通过RichText和long text发送
-		if elem.LightApp != nil {
-			break
-		}
 		// is rich long msg
 		if elem.GeneralFlags != nil && elem.GeneralFlags.LongTextResid != "" {
 			if f := c.GetForwardMessage(elem.GeneralFlags.LongTextResid); f != nil && len(f.Nodes) == 1 {
